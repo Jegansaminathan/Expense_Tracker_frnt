@@ -72,7 +72,6 @@ const Signup = () => {
         <p>Join us today by entering your details below.</p>
         <div className="formbox signupf">
           <form onSubmit={handlesubmit} className="formsty">
-            <Inputfld/>
             <div style={{ display: "flex", gap: "5%" }}>
               <Inputfld
                 type="text"
