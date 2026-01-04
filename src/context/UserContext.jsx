@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-export let Ct = createContext();
+export let Ct = createContext({});
 
 let UserContext = ({ children }) => {
   let [user, setUser] = useState();
