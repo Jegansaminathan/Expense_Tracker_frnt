@@ -1,0 +1,146 @@
+*{margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.auth{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.expfrom{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12%;
+  padding: 3%;
+ 
+}
+.expright{
+  width: 40%;
+  height: 100%;
+  background-color: #f4f0ff;
+  position: relative;
+}
+.exprightsub{
+  width: 100%;
+  height: 100%;
+  padding: 7% 8% 1% 8%;
+}
+.expright .block{
+  width:20%;
+  height:18%;
+  background-color: #8c0ffa;
+  position: absolute;
+}
+.expright .top{
+   border-radius: 0px 5px 25px 8px;
+   top:0%;
+   left: 0%;
+}
+.expright .down{
+  border-radius: 0px 170px 5px 0px;
+   bottom:0%;
+   left: 0%;
+}
+.expright .blocksync{
+  width:100%;
+  height: 50%;
+  position: relative;
+  bottom: -40%;
+  left: 5%; 
+}
+.expright .blocksync img{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 40px;
+   z-index: 2;
+}
+.expright .blocksync .mid{
+  width: 40%;
+  height: 50%;
+  background-color:#bf00d9;
+  border-radius: 30px;
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formbox{
+border: 2px solid black;
+border-radius: 10px;
+padding:3%;
+}
+.logincon{
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+.loginf{
+  width: 60%;
+  height: 60vh;
+
+}
+.formsty{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.inpsty{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #cde2f7;
+  overflow: hidden;
+}
+.inpsty .input{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding-left: 20px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+.button{
+  width:100%;
+  height:7vh;
+  border: none;
+  border-radius: 10px;
+  background-color: #8247ff;
+  color: #dae4ef;
+  font-size: medium;
+  font-weight: bold;
+}
+.signupf{
+  width: 100%;
+  height: 63vh;
+}
+@media (max-width: 426px){
+  .expfrom{
+    width: 100%;
+  }
+  .expright{
+    width: 0;
+    display: none;
+  }
+  .expfrom{
+    width: 100%;
+  }
+  .loginf{
+    width: 100%;
+  }
+  .logincon{
+  gap: 3%;
+}
+}
