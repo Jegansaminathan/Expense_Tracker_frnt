@@ -54,7 +54,6 @@ const Login = () => {
                 <Inputfld 
                 value={email} 
                 type='text' 
-                placeholder='Demo123@gmail.com' 
                 lable="Email" 
                 onChange={({target})=>setE(target.value)}/>
                 <Inputfld 
@@ -62,7 +61,10 @@ const Login = () => {
                 type='password'  
                 lable="Password" 
                 onChange={({target})=>SetP(target.value)}/>
-                {err&&<p style={{color:'red'}}>{err}</p>}
+                <div className='loginforgotpass'>
+                <p style={{color:'red'}}>{err}</p>
+                <Link to='/forgotpass'>Forgot Password</Link>
+                </div>
                 <button type='Submit' className='button'>LOGIN</button>
               </form>
             </div>

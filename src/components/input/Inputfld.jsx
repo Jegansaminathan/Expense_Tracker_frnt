@@ -8,7 +8,7 @@ const Inputfld = ({value,onChange,type,placeholder,lable}) => {
         setP(!showpwd)
     }
   return (
-    <div style={{width:'100%',height:'11.5vh',display:'flex',flexDirection:'column',gap:'5px'}}>
+    <div style={{width:'100%',minHeight:'10.5vh',display:'flex',flexDirection:'column',gap:'5px'}}>
         <div>{lable}</div>
         <div className='inpsty'>
             <input type={type=='password'?showpwd?'text':'password':type}

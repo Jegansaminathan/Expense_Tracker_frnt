@@ -9,6 +9,7 @@ import Income from './pages/dashboard/Income'
 import UserContext from './context/UserContext'
 import {Toaster} from 'react-hot-toast'
 import './App.css'
+import ForgotPass from './pages/auth/ForgotPass'
 
 const App = () => {
   return (<div>
@@ -18,6 +19,7 @@ const App = () => {
    <Routes>
     <Route path='/' element={< Root />}/>
     <Route path='/login' element={<Login/>}/>
+    <Route path='/forgotpass' element={<ForgotPass/>}/>
     <Route path='/signup' element={<Signup/>}/>
     <Route path='/home' element={<Home/>}/>
     <Route path='/expense' element={<Expense/>}/>
