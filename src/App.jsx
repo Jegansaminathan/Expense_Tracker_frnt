@@ -10,6 +10,7 @@ import UserContext from './context/UserContext'
 import {Toaster} from 'react-hot-toast'
 import './App.css'
 import ForgotPass from './pages/auth/ForgotPass'
+import { jwtDecode } from "jwt-decode";
 
 const App = () => {
   return (<div>
@@ -38,7 +39,23 @@ const App = () => {
 }
 
 export default App
+
+
+const isTokenValid = () => {
+  const token = localStorage.getItem("token");
+  if (!token) return false;
+
+  try {
+    const decoded = jwtDecode(token);
+    const currentTime = Date.now() / 1000; // milleseconds to seconds
+
+    return decoded.exp > currentTime;
+  } catch (err) {
+    return false;
+  }
+};
+
 const Root=()=>{
-  const isauth=!!localStorage.getItem("token")
+  const isauth= isTokenValid();
   return isauth ? <Navigate to={'/home'}/> : <Navigate to={'/login'}/>
 }

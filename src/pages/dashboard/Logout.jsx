@@ -41,17 +41,67 @@ const Logout = () => {
   }
 
   return (
-    <div style={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <div style={{ width: '30rem', height: '20rem', borderRadius: '30px', backgroundColor: '#d73535ff', padding: '20px' }}>
-        <h4>Account Logout in <span>{count}</span></h4>
-        <p>Want to Logout?</p>
-        <div style={{ display: 'flex', gap: '10px' }}>
-          <button onClick={logoutnow}>Yes</button>
-          <button onClick={cancelLogout}>No</button>
-        </div>
+  <div
+    style={{
+      width: "100%",
+      height: "100vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      background: "rgba(0,0,0,0.4)",
+    }}
+  >
+    <div
+      style={{
+        width: "360px",
+        padding: "25px",
+        borderRadius: "16px",
+        backgroundColor: "#ffffff",
+        boxShadow: "0 10px 25px rgba(0,0,0,0.25)",
+        textAlign: "center",
+      }}
+    >
+      <h3 style={{ marginBottom: "10px", color: "#333" }}>
+        Logging out in <span style={{ color: "#d73535" }}>{count}</span>s
+      </h3>
+
+      <p style={{ color: "#666", marginBottom: "25px" }}>
+        Are you sure you want to logout?
+      </p>
+
+      <div style={{ display: "flex", gap: "12px", justifyContent: "center" }}>
+        <button
+          onClick={logoutnow}
+          style={{
+            padding: "10px 20px",
+            borderRadius: "8px",
+            border: "none",
+            backgroundColor: "#d73535",
+            color: "#fff",
+            cursor: "pointer",
+            fontWeight: "600",
+          }}
+        >
+          Yes, Logout
+        </button>
+
+        <button
+          onClick={cancelLogout}
+          style={{
+            padding: "10px 20px",
+            borderRadius: "8px",
+            border: "1px solid #ccc",
+            backgroundColor: "#f5f5f5",
+            cursor: "pointer",
+            fontWeight: "600",
+          }}
+        >
+          Cancel
+        </button>
       </div>
     </div>
-  )
+  </div>
+);
 }
 
 export default Logout
